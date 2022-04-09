@@ -5,6 +5,7 @@ services:
     tty: true
     ports:
       - "3001:3000"
+      - "4000:4000"
     volumes:
       - ./app:/app
     command: yarn dev
