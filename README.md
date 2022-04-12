@@ -35,7 +35,7 @@ $ docker-compose exec front sh
 - コンテナ内のログ確認
 
 ```sh
-$ dccker-compose logs -ft
+$ docker-compose logs --follow --timestamps
 ```
 
 # VSCode 利用者向け設定
