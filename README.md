@@ -40,7 +40,7 @@ $ dccker-compose logs -ft
 
 # VSCode 利用者向け設定
 
-以下の２つ vscode の拡張機能を導入すると、保存と同時にリンター及びフォーマッターの起動、リアルタイムでエラー検出をしてくれる。
+以下の vscode 拡張機能を導入すると、保存と同時にリンター及びフォーマッターが実行され、リアルタイムでエラーを検出します。
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
