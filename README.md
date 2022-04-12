@@ -2,7 +2,8 @@
 
 nnecstasy のフロントエンドプロジェクトです。
 
-この [README.md](./README.md) ではホスト側の開発手順を記載します。コンテナ内での操作等は[./app/README.md](./app/README.md)に記載します。
+この [README.md](./README.md) はホスト側の開発手順になります。
+コンテナ内での操作等は[./app/README.md](./app/README.md)を参照してください。
 
 # 開発手順
 
