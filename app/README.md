@@ -39,4 +39,4 @@ $ yarn format
 $ yarn build
 ```
 
-`/app/.next/`にビルドファイル群が作成。
+ビルドを行うと`/app/.next/`にビルドファイル群が作成されます。
