@@ -26,7 +26,7 @@ $ docker-compose up -d
 
 [http://localhost:3001/](http://localhost:3001/)にアクセス
 
-- コンテナ内に入る
+- コンテナ内にログイン
 
 ```sh
 $ docker-compose exec front sh
