@@ -1,8 +1,13 @@
 # コンテナ内の環境
 
-このプロジェクトではフレームワーク[Next.js](https://nextjs.org/)を利用.環境構築は[create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)を利用。
 
-言語は、TypeScript(\*.ts）で記述。css フレームワークは[TailwindCSS](https://tailwindcss.com/)を利用。
+- Web開発フレームワーク
+   - [Next.js](https://nextjs.org/)
+      - 環境構築 : [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+- 言語 
+   -[TypeScript(\*.ts）](https://www.typescriptlang.org/)
+ - CSSフレームワーク
+   - [TailwindCSS](https://tailwindcss.com/)
 
 # 開発手順
 
