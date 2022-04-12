@@ -32,7 +32,7 @@ $ docker-compose up -d
 $ docker-compose exec front sh
 ```
 
-- ログを見る
+- コンテナ内のログ確認
 
 ```sh
 $ dccker-compose logs -ft
