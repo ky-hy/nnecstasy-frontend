@@ -7,7 +7,8 @@
     "build": "NODE_ENV=production next build",
     "start": "next start -p 4000",
     "lint": "next lint",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "generate": "graphql-codegen -r dotenv/config dotenv_config_path=.env.local"
   },
   "dependencies": {
     "@apollo/client": "^3.6.7",
