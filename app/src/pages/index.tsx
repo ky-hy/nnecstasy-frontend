@@ -1,26 +1,24 @@
+import { useQuery } from '@apollo/client';
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Footer from '../components/Footer';
+import { HomePresenter } from '../components/templates/Home';
+import {
+  GetAdultVideosDocument,
+  GetAdultVideosQuery,
+} from '../graphql/generated';
 
+/**
+ * ホーム
+ */
 const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>nne</title>
-        <meta
-          name="description"
-          content="this is nne site by using create next app"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <h1 className=" text-4xl font-bold  text-red-700">nne</h1>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+  // 一旦クライアントサイドレンダリングをする
+  const { data, error, loading } = useQuery<GetAdultVideosQuery>(
+    GetAdultVideosDocument,
   );
+
+  if (loading) <div>...loading</div>;
+  if (error) <div>時間をおいてリロードしてください。</div>;
+
+  return <HomePresenter adultVideos={data?.AdultVideos} />;
 };
 
 export default Home;
