@@ -1,0 +1,9 @@
+query getAdultVideos {
+  AdultVideos(filter: { actresses: ["上原亜衣"] }) {
+    name
+    url
+    thumbnail {
+      url
+    }
+  }
+}
