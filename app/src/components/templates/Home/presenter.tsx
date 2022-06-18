@@ -11,7 +11,7 @@ type Props = {
 /**
  * ホームページのpresenterコンポーネント
  *
- * ディレクトリ: /
+ * 対応するページURL: /
  */
 const Home = (props: Props) => (
   <>
