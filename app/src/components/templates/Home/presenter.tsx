@@ -22,10 +22,10 @@ const Home = (props: Props) => (
     </Head>
     <main>
       <h1 className=" text-4xl font-bold  text-red-700">nne</h1>
-      <div className="flex flex-wrap gap-2 mb-[-20px] sm:mb-[-30px]">
+      <div className="flex flex-wrap mb-[-20px] sm:mb-[-30px]">
         {props.adultVideos?.map((video) => (
           <div
-            className="mx-2 mb-[20px] w-full sm:mb-[30px] sm:w-[calc(100%/3.1)]"
+            className="mx-2 mb-[20px] w-full sm:mb-[30px] sm:w-[calc((100%/3)-16px)]"
             key={video.name}
           >
             <Card
