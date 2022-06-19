@@ -28,8 +28,12 @@ const Card = React.memo((props: Props) => (
       />
     </figure>
     <div className="p-[15px] last:mb-0">
-      <h3 className="mb-[5px] text-[1.125rem] font-bold">{props.title}</h3>
-      <p className="text-[#777]">{props.description}</p>
+      <h3 className="overflow-hidden mb-[5px] text-[1.125rem] font-bold text-ellipsis whitespace-nowrap break-words">
+        {props.title}
+      </h3>
+      <p className="overflow-hidden text-[#777] text-ellipsis whitespace-nowrap break-words">
+        {props.description}
+      </p>
     </div>
   </div>
 ));
