@@ -1,5 +1,7 @@
 import { ApolloProvider } from '@apollo/client';
 import type { AppProps } from 'next/app';
+import { Footer } from '../components/uniqueParts/Footer';
+import { Header } from '../components/uniqueParts/Header';
 import apolloClient from '../libs/apollo';
 import '../styles/globals.css';
 
@@ -11,11 +13,17 @@ function App({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <div className="mx-auto w-full md:w-[1230px]">
+    <>
       <ApolloProvider client={apolloClient}>
-        <Component {...pageProps} />
+        <div className="flex flex-col min-h-[100vh]">
+          <Header />
+          <main className="flex-1 py-16 px-4 mx-auto w-full md:w-[1230px]">
+            <Component {...pageProps} />
+          </main>
+          <Footer />
+        </div>
       </ApolloProvider>
-    </div>
+    </>
   );
 }
 
