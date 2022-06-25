@@ -17,7 +17,7 @@ const Home = (props: Props) => (
   <>
     <Head>
       <title>nne - ホーム</title>
-      <meta name="description" content="nneのホームぺーじです。" />
+      <meta name="description" content="nneのホームページです。" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <main>
