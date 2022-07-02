@@ -15,8 +15,8 @@ const Home: NextPage = () => {
     GetAdultVideosDocument,
   );
 
-  if (loading) <div>...loading</div>;
-  if (error) <div>時間をおいてリロードしてください。</div>;
+  if (loading) return <div>...loading</div>;
+  if (error) return <div>時間をおいてリロードしてください。</div>;
 
   return <HomePresenter adultVideos={data?.AdultVideos} />;
 };
