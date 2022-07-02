@@ -1,0 +1,9 @@
+query getAdultVideoById($id: String!) {
+  AdultVideo(videoId: $id) {
+    name
+    url
+    thumbnail {
+      url
+    }
+  }
+}
