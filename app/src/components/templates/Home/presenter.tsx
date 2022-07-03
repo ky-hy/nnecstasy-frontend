@@ -23,7 +23,7 @@ const Home = (props: Props) => (
     <div className="flex flex-wrap mb-[-20px] sm:mb-[-30px]">
       {props.adultVideos?.map((video) => (
         <div
-          className="mx-auto mb-[20px] w-[95%] sm:mb-[30px] sm:w-[calc((100%/3)-16px)]"
+          className="mx-auto mb-[20px] w-[95%] sm:mx-0 sm:mb-[30px] sm:w-[calc((100%/3)-16px)]"
           key={video.name}
         >
           <Card
