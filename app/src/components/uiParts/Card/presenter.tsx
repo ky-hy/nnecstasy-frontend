@@ -8,6 +8,8 @@ type Props = {
   title: string;
   /** サムネイルのURL */
   thumnnail: string;
+  /** クリックされた時の動作 */
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 };
 
 /**
@@ -15,9 +17,10 @@ type Props = {
  * @param props.description 説明
  * @param props.title タイトル
  * @param props.thumnail サムネイル画像のパス
+ * @param props.onClick カードをクリックした時に走るコールバック
  */
 const Card = React.memo((props: Props) => (
-  <div className="shadow-xl">
+  <div className="shadow-xl cursor-pointer" onClick={props.onClick}>
     <figure className="overflow-hidden relative pt-[56.25%]">
       <Image
         src={props.thumnnail}
