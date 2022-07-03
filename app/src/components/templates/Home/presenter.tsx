@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import router from 'next/router';
 import { GetAdultVideosQuery } from '../../../graphql/generated';
 import { Card } from '../../uiParts/Card';
 
@@ -29,6 +30,7 @@ const Home = (props: Props) => (
             title={video.name}
             description={video.name}
             thumnnail={video.thumbnail.url}
+            onClick={() => router.push(`/videos/${video.id}`)}
           />
         </div>
       ))}
