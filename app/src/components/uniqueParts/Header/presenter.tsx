@@ -10,17 +10,19 @@ type Props = {
  * @param props
  */
 const HeaderComponent = React.memo((props: Props) => (
-  <header className="flex mx-auto w-full md:w-[1230px]">
-    <div className="flex-1">
-      <Image
-        className="cursor-pointer"
-        src="/images/logo500.png"
-        alt="logo"
-        objectFit="cover"
-        width="70"
-        height="70"
-        onClick={props.onclickHome}
-      />
+  <header>
+    <div className="flex mx-auto w-full max-w-[1230px]">
+      <div className="flex-1">
+        <Image
+          className="cursor-pointer"
+          src="/images/logo500.png"
+          alt="logo"
+          objectFit="cover"
+          width="70"
+          height="70"
+          onClick={props.onclickHome}
+        />
+      </div>
     </div>
   </header>
 ));
