@@ -10,7 +10,7 @@ type Props = {
  * @param props
  */
 const HeaderComponent = React.memo((props: Props) => (
-  <header>
+  <header className="fixed z-10 w-full h-[70px] bg-white shadow-lg">
     <div className="flex mx-auto w-full max-w-[1230px]">
       <div className="flex-1">
         <Image
