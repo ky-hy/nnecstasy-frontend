@@ -14,7 +14,7 @@ const Video: React.FC = () => {
   if (error) return <div>時間をおいてリロードしてください。</div>;
 
   const videoJsOptions = {
-    sources: [{ src: data?.AdultVideo.url!, type: 'application/x-mpegURL' }],
+    sources: [{ src: data?.AdultVideo.url! }],
     poster: data?.AdultVideo.thumbnail.url!,
   };
 
