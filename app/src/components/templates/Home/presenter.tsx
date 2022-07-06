@@ -20,19 +20,16 @@ const Home = (props: Props) => (
       <meta name="description" content="nneのホームページです。" />
       <link rel="icon" href="/images/favicon.ico" />
     </Head>
-    <div className="flex flex-wrap mb-[-20px] sm:mb-[-30px]">
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] mb-[-20px] sm:mb-[-30px]">
       {props.adultVideos?.map((video) => (
-        <div
-          className="mx-auto mb-[20px] w-[95%] sm:mx-0 sm:mb-[30px] sm:w-[calc((100%/3)-16px)]"
+        <Card
+          className="mx-auto mb-[20px] w-[95%] sm:mx-auto sm:mb-[30px]"
           key={video.name}
-        >
-          <Card
-            title={video.name}
-            description={video.name}
-            thumnnail={video.thumbnail.url}
-            onClick={() => router.push(`/videos/${video.id}`)}
-          />
-        </div>
+          title={video.name}
+          description={video.name}
+          thumnnail={video.thumbnail.url}
+          onClick={() => router.push(`/videos/${video.id}`)}
+        />
       ))}
     </div>
   </>

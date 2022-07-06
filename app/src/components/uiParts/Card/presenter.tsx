@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 import React from 'react';
 
@@ -10,6 +11,8 @@ type Props = {
   thumnnail: string;
   /** クリックされた時の動作 */
   onClick?: React.MouseEventHandler<HTMLDivElement>;
+  /** className */
+  className?: string;
 };
 
 /**
@@ -18,9 +21,13 @@ type Props = {
  * @param props.title タイトル
  * @param props.thumnail サムネイル画像のパス
  * @param props.onClick カードをクリックした時に走るコールバック
+ * @param props.className
  */
 const Card = React.memo((props: Props) => (
-  <div className="shadow-xl cursor-pointer" onClick={props.onClick}>
+  <div
+    className={clsx(props.className, 'shadow-xl cursor-pointer')}
+    onClick={props.onClick}
+  >
     <figure className="overflow-hidden relative pt-[56.25%]">
       <Image
         src={props.thumnnail}
