@@ -17,7 +17,7 @@ function App({ Component, pageProps }: AppProps) {
       <ApolloProvider client={apolloClient}>
         <div className="flex flex-col min-h-[100vh]">
           <Header />
-          <main className="flex-1 my-10 mx-auto w-full max-w-[1230px]">
+          <main className="flex-1 my-[70px] mx-auto w-full max-w-[1230px] md:my-[80px]">
             <Component {...pageProps} />
           </main>
           <Footer />
