@@ -4,7 +4,6 @@ import { GetAdultVideoByIdDocument } from '../../src/graphql/generated';
 export const getAdultVideoById = graphql.query(
   GetAdultVideoByIdDocument,
   (req, res, ctx) => {
-    console.log(req.variables.id);
     if (req.variables.id === 'video_id_0') {
       return res(
         ctx.data({
