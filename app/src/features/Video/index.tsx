@@ -7,7 +7,7 @@ import { useQueryVideo } from './hooks/useQueryVideo';
 /**
  * プレイヤーでビデオを表示する昨日
  */
-const Video: React.FC = () => {
+export const Video: React.FC = () => {
   const { data, loading, error } = useQueryVideo();
 
   if (loading) return <div>...loading</div>;
@@ -34,5 +34,3 @@ const Video: React.FC = () => {
     </>
   );
 };
-
-export default Video;
