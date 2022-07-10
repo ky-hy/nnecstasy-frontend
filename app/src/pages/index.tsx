@@ -1,24 +1,18 @@
-import { useQuery } from '@apollo/client';
 import type { NextPage } from 'next';
+import { ReactElement, ReactNode } from 'react';
 
-import { HomePresenter } from '@/components/templates/Home';
-import {
-  GetAdultVideosDocument,
-  GetAdultVideosQuery,
-} from '@/graphql/generated';
+import { Home } from '@/components/templates/Home';
+import { FluidLayout } from '@/layouts';
+
+export type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
 /**
  * ホーム
  */
-const Home: NextPage = () => {
-  // 一旦クライアントサイドレンダリングをする
-  const { data, error, loading } = useQuery<GetAdultVideosQuery>(
-    GetAdultVideosDocument,
-  );
+const HomePage: NextPageWithLayout = () => <Home />;
 
-  if (loading) return <div>...loading</div>;
-  if (error) return <div>時間をおいてリロードしてください。</div>;
+HomePage.getLayout = FluidLayout;
 
-  return <HomePresenter adultVideos={data?.AdultVideos} />;
-};
-
-export default Home;
+export default HomePage;

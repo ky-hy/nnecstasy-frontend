@@ -9,9 +9,7 @@ import {
 import { List } from './components/List';
 
 /**
- * ホームページのpresenterコンポーネント
- *
- * 対応するページURL: /
+ * ビデオリストを表示する機能
  */
 export const Videos: React.FC = () => {
   const { data, error, loading } = useQuery<GetAdultVideosQuery>(
