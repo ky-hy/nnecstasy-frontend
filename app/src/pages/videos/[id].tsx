@@ -1,7 +1,9 @@
+import 'video.js/dist/video-js.css';
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import 'video.js/dist/video-js.css';
-import { Video } from '../../features/Video';
+
+import { Video } from '@/features/Video';
 
 /**
  * 動画表示ページ

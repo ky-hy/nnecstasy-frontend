@@ -1,4 +1,5 @@
 import router from 'next/router';
+
 import HeaderComponent from './presenter';
 /**
  * ヘッダーコンテナコンポーネント

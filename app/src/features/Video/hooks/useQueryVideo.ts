@@ -1,9 +1,10 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
+
 import {
   GetAdultVideoByIdDocument,
   GetAdultVideoByIdQuery,
-} from '../../../graphql/generated';
+} from '@//graphql/generated';
 
 /**
  * ビデオ情報を取得するフック

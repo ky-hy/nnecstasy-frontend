@@ -1,8 +1,10 @@
-import Head from 'next/head';
 import 'video.js/dist/video-js.css';
-import { Information } from './components/Information';
-import VideoPlayer from './components/VideoPlayer';
-import { useQueryVideo } from './hooks/useQueryVideo';
+
+import Head from 'next/head';
+
+import VideoPlayer from '@/features/Video//components/VideoPlayer';
+import { useQueryVideo } from '@/features/Video//hooks/useQueryVideo';
+import { Information } from '@/features/Video/components/Information';
 
 /**
  * プレイヤーでビデオを表示する昨日

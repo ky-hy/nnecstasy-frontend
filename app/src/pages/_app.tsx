@@ -1,9 +1,11 @@
+import '@/styles/globals.css';
+
 import { ApolloProvider } from '@apollo/client';
 import type { AppProps } from 'next/app';
-import { Footer } from '../components/uniqueParts/Footer';
-import { Header } from '../components/uniqueParts/Header';
-import apolloClient from '../libs/apollo';
-import '../styles/globals.css';
+
+import { Footer } from '@/components/uniqueParts/Footer';
+import { Header } from '@/components/uniqueParts/Header';
+import apolloClient from '@/libs/apollo';
 
 function App({ Component, pageProps }: AppProps) {
   // モックサーバーを起動

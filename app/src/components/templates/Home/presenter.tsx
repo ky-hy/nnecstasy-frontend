@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import router from 'next/router';
-import { GetAdultVideosQuery } from '../../../graphql/generated';
-import { Card } from '../../uiParts/Card';
+
+import { Card } from '@/components/uiParts/Card';
+import { GetAdultVideosQuery } from '@/graphql/generated';
 
 type Props = {
   /** ビデオ一覧 */
