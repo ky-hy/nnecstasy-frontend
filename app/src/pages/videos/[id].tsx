@@ -1,24 +1,12 @@
-import 'video.js/dist/video-js.css';
-
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-import { Video } from '@/features/Video';
+import { VideoDetail } from '@/components/templates/VideoDetail';
+import { FluidLayout } from '@/layouts';
+import { NextPageWithLayout } from '@/libs/next/types';
 
 /**
  * 動画表示ページ
  */
-const VideoDetail: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>nne - nne</title>
-        <meta name="description" content="nneの公式サイトです。" />
-        <link rel="icon" href="/images/favicon.ico" />
-      </Head>
-      <Video />
-    </>
-  );
-};
+const VideoDetailPage: NextPageWithLayout = () => <VideoDetail />;
 
-export default VideoDetail;
+VideoDetailPage.getLayout = FluidLayout;
+
+export default VideoDetailPage;
