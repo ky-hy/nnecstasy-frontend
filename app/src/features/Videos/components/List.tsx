@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import router from 'next/router';
+import * as React from 'react';
 
 import { Card } from '@/components/uiParts/Card';
 import { GetAdultVideosQuery } from '@/graphql/generated';
@@ -9,20 +9,10 @@ type Props = {
   adultVideos: GetAdultVideosQuery['AdultVideos'] | undefined;
 };
 
-/**
- * ホームページのpresenterコンポーネント
- *
- * 対応するページURL: /
- */
-const Home = (props: Props) => (
-  <>
-    <Head>
-      <title>nne - ホーム</title>
-      <meta name="description" content="nneのホームページです。" />
-      <link rel="icon" href="/images/favicon.ico" />
-    </Head>
+export const List: React.FC<Props> = (props) => {
+  return (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] mb-[-20px] sm:mb-[-30px]">
-      {props.adultVideos?.map((video) => (
+      {props?.adultVideos?.map((video) => (
         <Card
           className="mx-auto mb-[20px] w-[95%] sm:mx-auto sm:mb-[30px]"
           key={video.name}
@@ -33,6 +23,5 @@ const Home = (props: Props) => (
         />
       ))}
     </div>
-  </>
-);
-export default Home;
+  );
+};
