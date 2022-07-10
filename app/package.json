@@ -32,6 +32,8 @@
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.2.5",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tailwindcss": "^3.5.0",
     "msw": "^0.42.1",
     "postcss": "^8.4.12",
