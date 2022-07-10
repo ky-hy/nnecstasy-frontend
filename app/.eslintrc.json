@@ -1,4 +1,10 @@
 {
+  "settings": {
+    "import/resolver": {
+      "typescript": { "project": "./app/tsconfig.json" } // pasth注意
+    }
+  },
+  "plugins": ["simple-import-sort"],
   "extends": [
     "next",
     "next/core-web-vitals",
@@ -10,15 +16,9 @@
   ],
   "rules": {
     // import の順番をルール化
-    // 参考：https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-    "import/order": [
-      "error",
-      {
-        "alphabetize": {
-          "order": "asc"
-        }
-      }
-    ],
+    "import/newline-after-import": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "react/display-name": "off"
   }
 }
