@@ -1,6 +1,6 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import Image from 'next/image';
-import React from 'react';
+import { memo } from 'react';
 
 type Props = {
   /** 説明 */
@@ -23,7 +23,7 @@ type Props = {
  * @param props.onClick カードをクリックした時に走るコールバック
  * @param props.className
  */
-const Card = React.memo((props: Props) => (
+const Card = memo((props: Props) => (
   <div
     className={clsx(props.className, 'shadow-xl cursor-pointer')}
     onClick={props.onClick}

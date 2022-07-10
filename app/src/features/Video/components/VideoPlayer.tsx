@@ -1,7 +1,8 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React from 'react';
-import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
+
+import * as React from 'react';
+import videojs from 'video.js';
 
 interface IVideoPlayerProps {
   options: videojs.PlayerOptions;

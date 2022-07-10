@@ -1,11 +1,11 @@
 import { useQuery } from '@apollo/client';
 import type { NextPage } from 'next';
-import { HomePresenter } from '../components/templates/Home';
+
+import { HomePresenter } from '@/components/templates/Home';
 import {
   GetAdultVideosDocument,
   GetAdultVideosQuery,
-} from '../graphql/generated';
-
+} from '@/graphql/generated';
 /**
  * ホーム
  */

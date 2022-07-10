@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { MouseEventHandler } from 'react';
+import { memo, MouseEventHandler } from 'react';
 
 type Props = {
   /** ホームボタン・ロゴを押された時の処理 */
@@ -9,7 +9,7 @@ type Props = {
  * ヘッダーコンポーネント
  * @param props
  */
-const HeaderComponent = React.memo((props: Props) => (
+const HeaderComponent = memo((props: Props) => (
   <header className="fixed z-10 w-full h-[70px] bg-white shadow-lg">
     <div className="flex mx-auto w-full max-w-[1230px]">
       <div className="flex-1">
