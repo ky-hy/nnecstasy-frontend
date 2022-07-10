@@ -1,31 +1,23 @@
 import '@/styles/globals.css';
 
 import { ApolloProvider } from '@apollo/client';
-import type { AppProps } from 'next/app';
 
-import { Footer } from '@/components/uniqueParts/Footer';
-import { Header } from '@/components/uniqueParts/Header';
 import apolloClient from '@/libs/apollo';
+import { AppPropsWithLayout } from '@/libs/next/types';
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppPropsWithLayout) {
   // モックサーバーを起動
   if (process.env.NODE_ENV === 'development') {
     const { setServer } = require('../../mocks');
     setServer();
   }
 
-  return (
-    <>
-      <ApolloProvider client={apolloClient}>
-        <div className="flex flex-col min-h-[100vh]">
-          <Header />
-          <main className="flex-1 my-[70px] mx-auto w-full max-w-[1230px] md:my-[80px]">
-            <Component {...pageProps} />
-          </main>
-          <Footer />
-        </div>
-      </ApolloProvider>
-    </>
+  const getLayout = Component.getLayout ?? ((page) => page);
+
+  return getLayout(
+    <ApolloProvider client={apolloClient}>
+      <Component {...pageProps} />
+    </ApolloProvider>,
   );
 }
 
