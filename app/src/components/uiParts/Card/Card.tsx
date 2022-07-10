@@ -23,7 +23,7 @@ type Props = {
  * @param props.onClick カードをクリックした時に走るコールバック
  * @param props.className
  */
-const Card = memo((props: Props) => (
+export const Card = memo((props: Props) => (
   <div
     className={clsx(props.className, 'shadow-xl cursor-pointer')}
     onClick={props.onClick}
@@ -47,5 +47,3 @@ const Card = memo((props: Props) => (
     </div>
   </div>
 ));
-
-export default Card;
