@@ -1,12 +1,11 @@
 import { useQuery } from '@apollo/client';
 import * as React from 'react';
 
+import { List } from '@/features/Videos/components/List';
 import {
   GetAdultVideosDocument,
   GetAdultVideosQuery,
 } from '@/graphql/generated';
-
-import { List } from './components/List';
 
 /**
  * ビデオリストを表示する機能
