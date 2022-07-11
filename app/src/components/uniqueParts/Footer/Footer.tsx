@@ -4,7 +4,7 @@ import Link from 'next/link';
  * フッターコンポーネント
  * @returns コンポーネント
  */
-const FooterComponent = () => (
+const Footer = () => (
   <footer>
     <div className="py-[20px] bg-[#222]">
       <div className="px-[15px] mx-auto max-w-[1230px]">
@@ -29,4 +29,4 @@ const FooterComponent = () => (
   </footer>
 );
 
-export default FooterComponent;
+export default Footer;
