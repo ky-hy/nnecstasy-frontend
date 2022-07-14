@@ -1,5 +1,6 @@
 import { graphql } from 'msw';
-import { GetAdultVideoByIdDocument } from '../../src/graphql/generated';
+
+import { GetAdultVideoByIdDocument } from '@/graphql/generated';
 
 export const getAdultVideoById = graphql.query(
   GetAdultVideoByIdDocument,
