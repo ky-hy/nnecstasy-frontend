@@ -1,5 +1,6 @@
 import { graphql } from 'msw';
-import { GetAdultVideosDocument } from '../../src/graphql/generated';
+
+import { GetAdultVideosDocument } from '@/graphql/generated';
 
 // ビデオを取得する
 export const getAdultVideos = graphql.query(

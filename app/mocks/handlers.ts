@@ -1,5 +1,5 @@
-import { getAdultVideoById } from './api/getAdultVideoById';
-import { getAdultVideos } from './api/video';
+import { getAdultVideoById } from '@/features/Video/api/mocks';
+import { getAdultVideos } from '@/features/Videos/api/mocks';
 
 // ハンドラ部分
 // モックの返却値を結合する部分
