@@ -2,8 +2,7 @@ import { render } from '@testing-library/react';
 import { GraphQLHandler, GraphQLRequest } from 'msw';
 
 import { Provider } from '@/components/uniqueParts/Provider';
-
-import { server } from '../../mocks/server';
+import { server } from '@/mocks/server';
 
 /**
  * レンダリングするための設定

@@ -6,7 +6,7 @@ import { AppPropsWithLayout } from '@/libs/next/types';
 function App({ Component, pageProps }: AppPropsWithLayout) {
   // モックサーバーを起動
   if (process.env.NODE_ENV === 'development') {
-    const { setServer } = require('../../mocks');
+    const { setServer } = require('@/mocks');
     setServer();
   }
 
