@@ -9,6 +9,7 @@ export const getAdultVideoById = graphql.query(
       return res(
         ctx.data({
           AdultVideo: {
+            __typename: 'Video',
             name: 'testtesttesttesttexztestestestesttestetesttesttestesttestesttestettestewstestswteststevideo_name0',
             url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
             thumbnail: {

@@ -10,6 +10,7 @@ export const getAdultVideos = graphql.query(
       ctx.data({
         AdultVideos: [
           {
+            __typename: 'Video',
             name: 'testtresttesttesttesttesttexztestestestesttestetesttesttestesttestesttestettestewstestswteststevideo_name_0',
             url: 'video_url_0',
             id: 'video_id_0',
@@ -18,6 +19,7 @@ export const getAdultVideos = graphql.query(
             },
           },
           {
+            __typename: 'Video',
             name: 'テストテストテストテストてテストテストテストテストvideo_name_1',
             url: 'video_url_1',
             id: 'video_id_1',
@@ -26,6 +28,7 @@ export const getAdultVideos = graphql.query(
             },
           },
           {
+            __typename: 'Video',
             name: 'video_name_2',
             url: 'video_url_2',
             id: 'video_id_2',
@@ -34,6 +37,7 @@ export const getAdultVideos = graphql.query(
             },
           },
           {
+            __typename: 'Video',
             name: 'video_name_3',
             url: 'video_url_3',
             id: 'video_id_3',
