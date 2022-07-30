@@ -1,8 +1,6 @@
 import '@/styles/globals.css';
 
-import { ApolloProvider } from '@apollo/client';
-
-import apolloClient from '@/libs/apollo';
+import { Provider } from '@/components/uniqueParts/Provider';
 import { AppPropsWithLayout } from '@/libs/next/types';
 
 function App({ Component, pageProps }: AppPropsWithLayout) {
@@ -15,9 +13,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return getLayout(
-    <ApolloProvider client={apolloClient}>
+    <Provider>
       <Component {...pageProps} />
-    </ApolloProvider>,
+    </Provider>,
   );
 }
 
