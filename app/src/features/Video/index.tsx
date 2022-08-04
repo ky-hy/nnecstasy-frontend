@@ -13,7 +13,8 @@ export const Video: React.FC = () => {
   const { data, loading, error } = useQueryVideo();
 
   if (loading) return <div>...loading</div>;
-  if (error) return <div>時間をおいてリロードしてください。</div>;
+  // TODO: 一旦例がをスローする方法、Suspendseができる方法でやる
+  if (error) throw new Error(error.message);
 
   const videoJsOptions = {
     sources: [{ src: data?.AdultVideo.url! }],

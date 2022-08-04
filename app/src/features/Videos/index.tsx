@@ -16,7 +16,8 @@ export const Videos: React.FC = () => {
   );
 
   if (loading) return <div>...loading</div>;
-  if (error) return <div>時間をおいてリロードしてください。</div>;
+  // TODO: 一旦例がをスローする方法、Suspendseができる方法でやる
+  if (error) throw new Error(error.message);
 
   return (
     <>
