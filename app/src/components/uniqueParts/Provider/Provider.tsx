@@ -1,6 +1,8 @@
 import { ApolloProvider } from '@apollo/client';
 import { ReactNode } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 
+import { ErrorFallback } from '@/components/uniqueParts/ErrorFallback';
 import apolloClient from '@/libs/apollo';
 
 /**
@@ -8,5 +10,9 @@ import apolloClient from '@/libs/apollo';
  * @param param0.children 子コンポーネント
  */
 export const Provider = ({ children }: { children: ReactNode }) => {
-  return <ApolloProvider client={apolloClient}>{children}</ApolloProvider>;
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <ApolloProvider client={apolloClient}>{children}</ApolloProvider>
+    </ErrorBoundary>
+  );
 };
